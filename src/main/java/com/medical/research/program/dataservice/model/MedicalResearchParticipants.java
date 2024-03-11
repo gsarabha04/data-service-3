@@ -6,159 +6,158 @@ import jakarta.persistence.*;
 
 import lombok.Data;
 
-
 @Entity
 @Data
 @Table(name = "medical_participants")
 public class MedicalResearchParticipants {
 
-    @Override
-    public String toString() {
-        return "MedicalResearchParticipants [id=" + id + ", researchCode=" + researchCode + ", description="
-                + description + ", firstName=" + firstName + ", lastName=" + lastName + ", DateOfBirth=" + dateOfBirth +", email=" + email + ", Phone="
-                + Phone + ", AddressLine1=" + addressLine1 + ", AddressLine2=" + addressLine2 + ", City=" + City
-                + ", State=" + State + ", zipCode=" + zipCode + ", ProfilePic=" + ProfilePic + "]";
-    }
+	@Override
+	public String toString() {
+		return "MedicalResearchParticipants [id=" + id + ", researchCode=" + researchCode + ", description="
+				+ description + ", firstName=" + firstName + ", lastName=" + lastName + ", dob=" + dob + ", email="
+				+ email + ", Phone=" + Phone + ", address=" + address + ", AddressLine2=" + addressLine2 + ", City="
+				+ City + ", State=" + State + ", zipCode=" + zipCode + ", ProfilePic=" + ProfilePic + "]";
+	}
 
-    @Id
-    private long id;
+	@Id
+	private long id;
 
-    private int researchCode;
-    
-    private String description;
+	private int researchCode;
 
-    private String firstName;
+	private String description;
 
-    private String lastName;
+	private String firstName;
 
-    private Date dateOfBirth;
+	private String lastName;
 
-    private String email;
+	private Date dob;
 
-    private String Phone;
+	private String email;
 
-    private String addressLine1;
+	private String Phone;
 
-    private String addressLine2;
+	private String address;
 
-    private String City;
+	private String addressLine2;
 
-    private String State;
+	private String City;
 
-    private String zipCode;
+	private String State;
 
-    private String ProfilePic;
+	private String zipCode;
 
-    public long getId() {
-        return id;
-    }
+	private String ProfilePic;
 
-    public void setId(long id) {
-        this.id = id;
-    }
+	public long getId() {
+		return id;
+	}
 
-    public int getResearchCode() {
-        return researchCode;
-    }
+	public void setId(long id) {
+		this.id = id;
+	}
 
-    public void setResearchCode(int researchCode) {
-        this.researchCode = researchCode;
-    }
+	public int getResearchCode() {
+		return researchCode;
+	}
 
-    public String getDescription() {
-        return description;
-    }
+	public void setResearchCode(int researchCode) {
+		this.researchCode = researchCode;
+	}
 
-    public void setDescription(String description) {
-        this.description = description;
-    }
+	public String getDescription() {
+		return description;
+	}
 
-    public String getFirstName() {
-        return firstName;
-    }
+	public void setDescription(String description) {
+		this.description = description;
+	}
 
-    public void setFirstName(String firstName) {
-        this.firstName = firstName;
-    }
+	public String getFirstName() {
+		return firstName;
+	}
 
-    public String getLastName() {
-        return lastName;
-    }
+	public void setFirstName(String firstName) {
+		this.firstName = firstName;
+	}
 
-    public void setLastName(String lastName) {
-        this.lastName = lastName;
-    }
-    
-    public Date getDateOfBirth() {
-        return dateOfBirth;
-    }
+	public String getLastName() {
+		return lastName;
+	}
 
-    public void setDateOfBirth(Date dateOfBirth) {
-        this.dateOfBirth = dateOfBirth;
-    }  
+	public void setLastName(String lastName) {
+		this.lastName = lastName;
+	}
 
-    public String getEmail() {
-        return email;
-    }
+	public Date getDob() {
+		return dob;
+	}
 
-    public void setEmail(String email) {
-        this.email = email;
-    }
+	public void setDob(Date dob) {
+		this.dob = dob;
+	}
 
-    public String getPhone() {
-        return Phone;
-    }
+	public String getEmail() {
+		return email;
+	}
 
-    public void setPhone(String phone) {
-        Phone = phone;
-    }
+	public void setEmail(String email) {
+		this.email = email;
+	}
 
-    public String getAddressLine1() {
-        return addressLine1;
-    }
+	public String getPhone() {
+		return Phone;
+	}
 
-    public void setAddressLine1(String addressLine1) {
-        this.addressLine1 = addressLine1;
-    }
+	public void setPhone(String phone) {
+		Phone = phone;
+	}
 
-    public String getAddressLine2() {
-        return addressLine2;
-    }
+	public String getAddress() {
+		return address;
+	}
 
-    public void setAddressLine2(String addressLine2) {
-        this.addressLine2 = addressLine2;
-    }
+	public void setAddress(String address) {
+		this.address = address;
+	}
 
-    public String getCity() {
-        return City;
-    }
+	public String getAddressLine2() {
+		return addressLine2;
+	}
 
-    public void setCity(String city) {
-        City = city;
-    }
+	public void setAddressLine2(String addressLine2) {
+		this.addressLine2 = addressLine2;
+	}
 
-    public String getState() {
-        return State;
-    }
+	public String getCity() {
+		return City;
+	}
 
-    public void setState(String state) {
-        State = state;
-    }
+	public void setCity(String city) {
+		City = city;
+	}
 
-    public String getZipCode() {
-        return zipCode;
-    }
+	public String getState() {
+		return State;
+	}
 
-    public void setZipCode(String zipCode) {
-        this.zipCode = zipCode;
-    }
+	public void setState(String state) {
+		State = state;
+	}
 
-    public String getProfilePic() {
-        return ProfilePic;
-    }
+	public String getZipCode() {
+		return zipCode;
+	}
 
-    public void setProfilePic(String profilePic) {
-        ProfilePic = profilePic;
-    }
-    
+	public void setZipCode(String zipCode) {
+		this.zipCode = zipCode;
+	}
+
+	public String getProfilePic() {
+		return ProfilePic;
+	}
+
+	public void setProfilePic(String profilePic) {
+		ProfilePic = profilePic;
+	}
+
 }
